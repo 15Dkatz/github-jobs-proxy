@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./",
-    "dev": "nodemon ./"
+    "dev": "nodemon ./",
+    "deploy": "gcloud config set project github-jobs-proxy && gcloud app deploy"
   },
   "keywords": [],
   "author": "",
