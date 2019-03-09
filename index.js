@@ -1,11 +1,10 @@
 const express = require('express');
 const request = require('request');
-const LimitingMiddleware = require('./limiting-middleware');
+const LimitingMiddleware = require('limiting-middleware');
 
 const app = express();
-const limitingMiddleware = new LimitingMiddleware();
 
-app.use(limitingMiddleware.limitByIp());
+app.use(new LimitingMiddleware().limitByIp());
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
