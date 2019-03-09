@@ -12,8 +12,9 @@ app.use((req, res, next) => {
   next();
 });
 
+// TODO: Send something html formatted to have local anchor links
 app.get('/', (req, res) => {
-  res.send('Service up! Try /positions');
+  res.send('Service up! Try /positions?description=javascript&location=San+Francisco');
 });
 
 
